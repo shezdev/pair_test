@@ -1,0 +1,25 @@
+To create a new user_branch
+---------------------------------------------------------------------------------------------
+git branch <user_branch>
+or
+git checkout –b  <user_branch>  # creates new branch and goes directly (checkout) to the branch
+
+To update local master branch with the remote
+---------------------------------------------------------------------------------------------
+git checkout master
+git pull
+
+To update the user_branch with the master (brings new commits from the master to the user branch)
+---------------------------------------------------------------------------------------------
+git rebase master <user_branch >   # brings new commits one by one
+
+To update the master with user_branch
+---------------------------------------------------------------------------------------------
+git checkout master
+git pull  # it seems a good idea to pull changes in the master branch before merging…
+git merge <user_branch >   # brings user_branch new commits
+
+To update the remote
+---------------------------------------------------------------------------------------------
+git checkout master
+git push master origin
